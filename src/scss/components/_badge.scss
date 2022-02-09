@@ -1,0 +1,58 @@
+@use '../abstracts' as *;
+
+.badge {
+  color: #fff;
+  border-radius: 1.5rem;
+  padding-top: 3.8rem;
+  margin-bottom: 2.4rem;
+  width: 100%;
+
+  background: $clr-badge-tabs;
+  padding: 0;
+
+  &__header {
+    display: flex;
+    background: $clr-badge-header;
+    border-radius: 1.5rem;
+    padding: 3rem;
+
+    img {
+      width: 6.4rem;
+      height: 6.4rem;
+      box-shadow: 0 0 0 3px white;
+      border-radius: 50%;
+      margin-right: 2rem;
+    }
+
+    &-text {
+      p {
+        color: $clr-card-text;
+        font-size: 1.5rem;
+      }
+      h2 {
+        font-size: 2.4rem;
+        font-weight: $fw-light;
+      }
+    }
+  }
+
+  &__tabs {
+    display: flex;
+    justify-content: space-between;
+    padding: 2.5rem 3rem;
+
+    a {
+      text-decoration: none;
+      color: $clr-badge-tabs-text;
+      font-weight: $fw-light;
+
+      &:hover {
+        color: white;
+      }
+
+      &.active {
+        color: white;
+      }
+    }
+  }
+}
