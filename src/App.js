@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import './scss/main.scss'
 import Card from './components/Card'
+import Badge from './components/Badge'
 
 function App() {
   const [times, setTimes] = useState([])
@@ -18,10 +19,10 @@ function App() {
 
   return (
     <div className='container'>
-      <Card profile={true} />
+      <Badge />
 
       {times.map((time, index) => {
-        return <Card profile={false} time={time} key={index} />
+        return <Card time={time} key={index} />
       })}
     </div>
   )
