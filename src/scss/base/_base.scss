@@ -1,0 +1,11 @@
+@use '../abstracts' as *;
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: $clr-body;
+  font-family: 'Rubik', sans-serif;
+  font-size: 1.8rem;
+  padding: 2rem;
+}

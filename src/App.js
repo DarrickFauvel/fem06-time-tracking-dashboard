@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useState } from 'react'
+import './scss/main.scss'
+import Card from './components/Card'
 
 function App() {
+  const [times, setTimes] = useState([])
+
+  const fetchData = async () => {
+    const res = await fetch('/data/data.json')
+    const data = await res.json()
+    // console.log(data)
+    setTimes(data)
+  }
+
+  useEffect(() => {
+    fetchData()
+  }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='container'>
+      <Card profile={true} />
+
+      {times.map((time, index) => {
+        return <Card profile={false} time={time} key={index} />
+      })}
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
