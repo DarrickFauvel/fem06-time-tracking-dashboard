@@ -7,123 +7,70 @@
   margin-bottom: 2.4rem;
   width: 100%;
 
-  &.profile {
-    background: $clr-card-profile-tabs;
-    padding: 0;
+  background-repeat: no-repeat;
+  background-position: top -1.1rem right 1.7rem;
 
-    .card__header {
+  &__content {
+    display: flex;
+    background-color: $clr-card-body;
+    flex-direction: column;
+    padding: 2.8rem 2.4rem;
+    border-radius: 1.5rem;
+
+    &-header {
       display: flex;
-      background: $clr-card-profile-header;
-      border-radius: 1.5rem;
-      padding: 3rem;
+      justify-content: space-between;
+      align-items: center;
 
-      img {
-        width: 6.4rem;
-        height: 6.4rem;
-        box-shadow: 0 0 0 3px white;
-        border-radius: 50%;
-        margin-right: 2rem;
-      }
-
-      &-text {
-        p {
-          color: $clr-card-text;
-          font-size: 1.5rem;
-        }
-        h2 {
-          font-size: 2.4rem;
-          font-weight: $fw-light;
-        }
+      h3 {
+        font-size: 1.8rem;
+        font-weight: $fw-medium;
       }
     }
 
-    .card__tabs {
+    &-body {
       display: flex;
       justify-content: space-between;
-      padding: 2.5rem 3rem;
+      align-items: center;
+      margin-top: 1.25rem;
 
-      a {
-        text-decoration: none;
-        color: $clr-card-profile-tabs-text;
+      h4 {
+        font-size: 3.2rem;
         font-weight: $fw-light;
+        line-height: 0;
+      }
 
-        &:hover {
-          color: white;
-        }
-
-        &.active {
-          color: white;
-        }
+      p {
+        font-size: 1.5rem;
+        font-weight: $fw-regular;
+        color: $clr-card-text;
       }
     }
   }
 
-  &.time {
-    background-repeat: no-repeat;
-    background-position: top -1.1rem right 1.7rem;
+  &.work {
+    background-color: $clr-work;
+    background-image: url('../../images/icon-work.svg');
+  }
 
-    .card__content {
-      display: flex;
-      background-color: $clr-card-body;
-      flex-direction: column;
-      padding: 2.8rem 2.4rem;
-      border-radius: 1.5rem;
-
-      &-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        h3 {
-          font-size: 1.8rem;
-          font-weight: $fw-medium;
-        }
-      }
-
-      &-body {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: 1.25rem;
-
-        h4 {
-          font-size: 3.2rem;
-          font-weight: $fw-light;
-          line-height: 0;
-        }
-
-        p {
-          font-size: 1.5rem;
-          font-weight: $fw-regular;
-          color: $clr-card-text;
-        }
-      }
-    }
-
-    &.work {
-      background-color: $clr-work;
-      background-image: url('../../images/icon-work.svg');
-    }
-
-    &.play {
-      background-color: $clr-play;
-      background-image: url('../../images/icon-play.svg');
-    }
-    &.study {
-      background-color: $clr-study;
-      background-image: url('../../images/icon-study.svg');
-    }
-    &.exercise {
-      background-color: $clr-exercise;
-      background-image: url('../../images/icon-exercise.svg');
-    }
-    &.social {
-      background-color: $clr-social;
-      background-image: url('../../images/icon-social.svg');
-    }
-    &.selfcare {
-      background-color: $clr-selfcare;
-      background-image: url('../../images/icon-self-care.svg');
-    }
+  &.play {
+    background-color: $clr-play;
+    background-image: url('../../images/icon-play.svg');
+  }
+  &.study {
+    background-color: $clr-study;
+    background-image: url('../../images/icon-study.svg');
+  }
+  &.exercise {
+    background-color: $clr-exercise;
+    background-image: url('../../images/icon-exercise.svg');
+  }
+  &.social {
+    background-color: $clr-social;
+    background-image: url('../../images/icon-social.svg');
+  }
+  &.selfcare {
+    background-color: $clr-selfcare;
+    background-image: url('../../images/icon-self-care.svg');
   }
 }
