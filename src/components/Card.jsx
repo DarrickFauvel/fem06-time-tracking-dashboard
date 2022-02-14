@@ -26,14 +26,11 @@ const Card = ({ time, activeTimeframe }) => {
   return (
     <div className={`card ${timeframeClassName}`}>
       <div className='card__content'>
-        <div className='card__content-header'>
-          <h3>{title}</h3>
-          <a href='##'>
-            <img src={iconEllipsis} alt='options' className='icon-ellipsis' />
-          </a>
-        </div>
-        <div className='card__content-body'>
-          <h4>{currentHours}hrs</h4>
+        <h3>{title}</h3>
+        <a href='##'>
+          <img src={iconEllipsis} alt='options' className='icon-ellipsis' />
+        </a>
+        <h4>{currentHours}hrs</h4>
         <p>
           {previousTitle} - {previousHours}hrs
         </p>
