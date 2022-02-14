@@ -2,6 +2,8 @@ import React from 'react'
 import badgeImage from '../images/image-jeremy.png'
 
 const Badge = ({ activeTimeframe, setActiveTimeframe }) => {
+  const timeframes = ['Daily', 'Weekly', 'Monthly']
+
   return (
     <div className='badge'>
       <div className='badge__header'>
