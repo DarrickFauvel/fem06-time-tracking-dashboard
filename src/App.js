@@ -21,7 +21,7 @@ function App() {
     <>
       <header className='header'>
         {/* Visually hidden h1 for accessibility */}
-        <h1 class='visually-hidden'>3 column preview card component</h1>
+        <h1 className='visually-hidden'>3 column preview card component</h1>
       </header>
 
       <main>
