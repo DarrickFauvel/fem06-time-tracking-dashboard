@@ -8,15 +8,19 @@ const Card = ({ time, activeTimeframe }) => {
 
   let currentHours
   let previousHours
+  let previousTitle = ''
   if (activeTimeframe === 'Daily') {
     currentHours = daily.current
     previousHours = daily.previous
+    previousTitle = 'Yesterday'
   } else if (activeTimeframe === 'Weekly') {
     currentHours = weekly.current
     previousHours = weekly.previous
+    previousTitle = 'Last Week'
   } else if (activeTimeframe === 'Monthly') {
     currentHours = monthly.current
     previousHours = monthly.previous
+    previousTitle = 'Last Month'
   }
 
   return (
@@ -30,8 +34,9 @@ const Card = ({ time, activeTimeframe }) => {
         </div>
         <div className='card__content-body'>
           <h4>{currentHours}hrs</h4>
-          <p>Last Week - {previousHours}hrs</p>
-        </div>
+        <p>
+          {previousTitle} - {previousHours}hrs
+        </p>
       </div>
     </div>
   )
