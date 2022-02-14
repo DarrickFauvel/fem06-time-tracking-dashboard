@@ -1,6 +1,11 @@
+@use '../abstracts' as *;
+
 .container {
-  display: flex;
-  flex-direction: column;
-  width: 32.7rem;
-  max-width: 32.7rem;
+  display: grid;
+  grid-template-columns: 32.7rem;
+  gap: 2.4rem;
+
+  @media (min-width: $breakpoint-xlg) {
+    grid-template: repeat(2, 24.4rem) / repeat(4, 25.5rem);
+  }
 }
