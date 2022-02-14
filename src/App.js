@@ -18,22 +18,27 @@ function App() {
   }, [])
 
   return (
+    <>
       <header class='header'>
         {/* Visually hidden h1 for accessibility */}
         <h1 class='visually-hidden'>3 column preview card component</h1>
       </header>
-    <div className='container'>
-      <Badge
-        activeTimeframe={activeTimeframe}
-        setActiveTimeframe={setActiveTimeframe}
-      />
 
-      {times.map((time, index) => {
-        return (
-          <Card time={time} activeTimeframe={activeTimeframe} key={index} />
-        )
-      })}
-    </div>
+      <main>
+        <div className='container'>
+          <Badge
+            activeTimeframe={activeTimeframe}
+            setActiveTimeframe={setActiveTimeframe}
+          />
+
+          {times.map((time, index) => {
+            return (
+              <Card time={time} activeTimeframe={activeTimeframe} key={index} />
+            )
+          })}
+        </div>
+      </main>
+    </>
   )
 }
 
