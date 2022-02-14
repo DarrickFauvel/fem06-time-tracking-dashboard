@@ -8,10 +8,8 @@ const Badge = ({ activeTimeframe, setActiveTimeframe }) => {
     <div className='badge'>
       <div className='badge__header'>
         <img src={badgeImage} alt='Jeremy Robson' />
-        <div className='badge__header-text'>
-          <p>Report for</p>
-          <h2>Jeremy Robson</h2>
-        </div>
+        <p>Report for</p>
+        <h2>Jeremy Robson</h2>
       </div>
       <div className='badge__tabs'>
         {timeframes.map((timeframe) => {
