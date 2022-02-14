@@ -3,6 +3,7 @@ import iconEllipsis from '../images/icon-ellipsis.svg'
 
 const Card = ({ time, activeTimeframe }) => {
   const { title, timeframes } = time
+  const { daily, weekly, monthly } = timeframes
   const timeframeClassName = title.split(' ').join('').toLowerCase()
 
   return (
