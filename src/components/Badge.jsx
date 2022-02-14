@@ -1,7 +1,7 @@
 import React from 'react'
 import badgeImage from '../images/image-jeremy.png'
 
-const Badge = (props) => {
+const Badge = ({ activeTimeframe, setActiveTimeframe }) => {
   return (
     <div className='badge'>
       <div className='badge__header'>
