@@ -19,7 +19,10 @@ function App() {
 
   return (
     <div className='container'>
-      <Badge />
+      <Badge
+        activeTimeframe={activeTimeframe}
+        setActiveTimeframe={setActiveTimeframe}
+      />
 
       {times.map((time, index) => {
         return <Card time={time} key={index} />
