@@ -3,35 +3,63 @@
 .badge {
   color: #fff;
   border-radius: 1.5rem;
-  padding-top: 3.8rem;
-  margin-bottom: 2.4rem;
   width: 100%;
-
   background: $clr-badge-tabs;
-  padding: 0;
+
+  @media (min-width: $breakpoint-xlg) {
+    grid-row: 1 / 3;
+
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
 
   &__header {
-    display: flex;
+    display: grid;
+    grid-template: auto / max-content 1fr;
+    grid-template-areas:
+      'image title'
+      'image name';
     background: $clr-badge-header;
     border-radius: 1.5rem;
     padding: 3rem;
 
+    @media (min-width: $breakpoint-xlg) {
+      grid-template: 0.5fr min-content auto / 1fr;
+      grid-template-areas:
+        'image'
+        'title'
+        'name';
+      height: 200%;
+    }
+
     img {
+      grid-area: image;
       width: 6.4rem;
       height: 6.4rem;
       box-shadow: 0 0 0 3px white;
       border-radius: 50%;
       margin-right: 2rem;
+
+      @media (min-width: $breakpoint-xlg) {
+        margin-bottom: 4.3rem;
+      }
     }
 
-    &-text {
-      p {
-        color: $clr-card-text;
-        font-size: 1.5rem;
-      }
-      h2 {
-        font-size: 2.4rem;
-        font-weight: $fw-light;
+    p {
+      grid-area: title;
+      align-self: flex-end;
+      color: $clr-card-text;
+      font-size: 1.5rem;
+    }
+    h2 {
+      grid-area: name;
+      font-weight: $fw-light;
+      font-size: 2.4rem;
+
+      @media (min-width: $breakpoint-xlg) {
+        font-size: 4rem;
+        line-height: 1.3;
       }
     }
   }
@@ -39,7 +67,14 @@
   &__tabs {
     display: flex;
     justify-content: space-between;
+    gap: 2.1rem;
     padding: 2.5rem 3rem;
+    height: 100%;
+
+    @media (min-width: $breakpoint-xlg) {
+      flex-direction: column;
+      justify-content: end;
+    }
 
     a {
       text-decoration: none;
