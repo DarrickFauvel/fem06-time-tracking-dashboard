@@ -5,6 +5,7 @@ import Badge from './components/Badge'
 
 function App() {
   const [times, setTimes] = useState([])
+  const [activeTimeframe, setActiveTimeframe] = useState('Weekly')
 
   const fetchData = async () => {
     const res = await fetch('/data/data.json')
