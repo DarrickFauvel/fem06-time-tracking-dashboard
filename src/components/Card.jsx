@@ -12,7 +12,7 @@ const Card = ({ time, activeTimeframe }) => {
         <div className='card__content-header'>
           <h3>{title}</h3>
           <a href='##'>
-            <img src={iconEllipsis} alt='options' />
+            <img src={iconEllipsis} alt='options' className='icon-ellipsis' />
           </a>
         </div>
         <div className='card__content-body'>
