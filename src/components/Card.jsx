@@ -27,7 +27,10 @@ const Card = ({ time, activeTimeframe }) => {
     <div className={`card ${timeframeClassName}`}>
       <div className='card__content'>
         <h3 className='card__title'>{title}</h3>
+        <a
           className='card__options'
+          href='/'
+          onClick={(e) => e.preventDefault()}>
           <img src={iconEllipsis} alt='options' />
         </a>
         <h4 className='card__current-hours'>{currentHours}hrs</h4>
