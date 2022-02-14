@@ -25,7 +25,9 @@ function App() {
       />
 
       {times.map((time, index) => {
-        return <Card time={time} key={index} />
+        return (
+          <Card time={time} activeTimeframe={activeTimeframe} key={index} />
+        )
       })}
     </div>
   )
