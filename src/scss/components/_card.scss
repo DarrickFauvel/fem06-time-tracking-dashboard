@@ -4,7 +4,6 @@
   color: #fff;
   border-radius: 1.5rem;
   padding-top: 3.8rem;
-  margin-bottom: 2.4rem;
   width: 100%;
   background-repeat: no-repeat;
   background-position: top -1.1rem right 1.7rem;
@@ -15,51 +14,67 @@
   }
 
   &__content {
-    display: flex;
+    display: grid;
+    grid-template: auto / 1fr max-content;
+    gap: 1.5rem;
+    grid-template-areas:
+      'time-category options'
+      'current-hours last-hours';
+    align-items: center;
     background-color: $clr-card-body;
-    flex-direction: column;
-    padding: 2.8rem 2.4rem;
+    padding: 3rem 2.4rem;
     border-radius: 1.5rem;
     transition: 0.3s ease-in-out;
 
-    &-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+    @media (min-width: $breakpoint-xlg) {
+      grid-template: 2fr 1fr 1fr / 1fr 1fr;
+      grid-template-areas:
+        'time-category options'
+        'current-hours current-hours'
+        'last-hours last-hours';
+      gap: 2rem;
+      height: 100%;
+    }
 
-      h3 {
-        font-size: 1.8rem;
-        font-weight: $fw-medium;
-      }
+    h3 {
+      grid-area: time-category;
+      font-size: 1.8rem;
+      font-weight: $fw-medium;
+    }
 
-      .icon-ellipsis {
-        padding: 1rem 0 1rem 1rem;
-        transition: 0.3s ease-in-out;
-      }
+    a {
+      grid-area: options;
+      justify-self: flex-end;
+      padding: 1rem 0 1rem 1rem;
+      transition: 0.3s ease-in-out;
+    }
 
-      .icon-ellipsis:hover {
-        filter: brightness(200%);
-        transform: scale(1.1);
-        // transform-origin: right;
+    a:hover {
+      filter: brightness(200%);
+      transform: scale(1.1);
+      transform-origin: right;
+    }
+
+    h4 {
+      grid-area: current-hours;
+      font-size: 3.2rem;
+      font-weight: $fw-light;
+      line-height: 0;
+
+      @media (min-width: $breakpoint-xlg) {
+        font-size: 5.6rem;
       }
     }
 
-    &-body {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: 1.25rem;
+    p {
+      grid-area: last-hours;
+      justify-self: flex-end;
+      font-size: 1.5rem;
+      font-weight: $fw-regular;
+      color: $clr-card-text;
 
-      h4 {
-        font-size: 3.2rem;
-        font-weight: $fw-light;
-        line-height: 0;
-      }
-
-      p {
-        font-size: 1.5rem;
-        font-weight: $fw-regular;
-        color: $clr-card-text;
+      @media (min-width: $breakpoint-xlg) {
+        justify-self: flex-start;
       }
     }
   }
