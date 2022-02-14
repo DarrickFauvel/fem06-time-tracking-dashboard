@@ -14,11 +14,18 @@ const Badge = ({ activeTimeframe, setActiveTimeframe }) => {
         </div>
       </div>
       <div className='badge__tabs'>
-        <a href='##'>Daily</a>
-        <a href='##' className='active'>
-          Weekly
-        </a>
-        <a href='##'>Monthly</a>
+        {timeframes.map((timeframe) => {
+          const classProperty = timeframe === activeTimeframe ? 'active' : ''
+          return (
+            <a
+              href='##'
+              className={classProperty}
+              onClick={() => setActiveTimeframe(timeframe)}
+              key={timeframe}>
+              {timeframe}
+            </a>
+          )
+        })}
       </div>
     </div>
   )
