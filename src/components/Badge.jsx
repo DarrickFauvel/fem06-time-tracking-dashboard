@@ -20,7 +20,10 @@ const Badge = ({ activeTimeframe, setActiveTimeframe }) => {
             <a
               href='##'
               className={classProperty}
-              onClick={() => setActiveTimeframe(timeframe)}
+              onClick={(e) => {
+                e.preventDefault()
+                setActiveTimeframe(timeframe)
+              }}
               key={timeframe}>
               {timeframe}
             </a>
