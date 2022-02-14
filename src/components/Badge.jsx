@@ -16,7 +16,7 @@ const Badge = ({ activeTimeframe, setActiveTimeframe }) => {
           const classProperty = timeframe === activeTimeframe ? 'active' : ''
           return (
             <a
-              href='##'
+              href='#'
               className={classProperty}
               onClick={(e) => {
                 e.preventDefault()
