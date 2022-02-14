@@ -8,6 +8,10 @@ body {
   font-family: 'Rubik', sans-serif;
   font-size: 1.8rem;
   padding: 2rem;
+
+  @media (min-width: $breakpoint-xlg) {
+    align-items: center;
+  }
 }
 
 .visually-hidden {
