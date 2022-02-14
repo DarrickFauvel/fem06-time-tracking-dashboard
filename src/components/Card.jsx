@@ -6,6 +6,19 @@ const Card = ({ time, activeTimeframe }) => {
   const { daily, weekly, monthly } = timeframes
   const timeframeClassName = title.split(' ').join('').toLowerCase()
 
+  let currentHours
+  let previousHours
+  if (activeTimeframe === 'Daily') {
+    currentHours = daily.current
+    previousHours = daily.previous
+  } else if (activeTimeframe === 'Weekly') {
+    currentHours = weekly.current
+    previousHours = weekly.previous
+  } else if (activeTimeframe === 'Monthly') {
+    currentHours = monthly.current
+    previousHours = monthly.previous
+  }
+
   return (
     <div className={`card ${timeframeClassName}`}>
       <div className='card__content'>
@@ -16,8 +29,8 @@ const Card = ({ time, activeTimeframe }) => {
           </a>
         </div>
         <div className='card__content-body'>
-          <h4>{timeframes.weekly.current}hrs</h4>
-          <p>Last Week - {timeframes.weekly.previous}hrs</p>
+          <h4>{currentHours}hrs</h4>
+          <p>Last Week - {previousHours}hrs</p>
         </div>
       </div>
     </div>
