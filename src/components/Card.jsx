@@ -1,7 +1,7 @@
 import React from 'react'
 import iconEllipsis from '../images/icon-ellipsis.svg'
 
-const Card = ({ time }) => {
+const Card = ({ time, activeTimeframe }) => {
   const { title, timeframes } = time
   const timeframeClassName = title.split(' ').join('').toLowerCase()
 
