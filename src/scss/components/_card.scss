@@ -27,11 +27,12 @@
     transition: 0.3s ease-in-out;
 
     @media (min-width: $breakpoint-xlg) {
-      grid-template: 2fr 1fr 1fr / 1fr 1fr;
+      grid-template: 1.8rem 1fr 1.5rem / 1fr 1fr;
       grid-template-areas:
         'time-category options'
         'current-hours current-hours'
         'past-hours past-hours';
+      gap: 0;
       height: 100%;
     }
 
@@ -61,7 +62,9 @@
       line-height: 0;
 
       @media (min-width: $breakpoint-xlg) {
+        align-self: end;
         font-size: 5.6rem;
+        line-height: normal;
       }
     }
 
