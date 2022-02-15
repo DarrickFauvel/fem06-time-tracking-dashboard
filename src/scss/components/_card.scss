@@ -19,7 +19,7 @@
     gap: 1.5rem;
     grid-template-areas:
       'time-category options'
-      'current-hours last-hours';
+      'current-hours past-hours';
     align-items: center;
     background-color: $clr-card-body;
     padding: 3rem 2.4rem;
@@ -31,8 +31,7 @@
       grid-template-areas:
         'time-category options'
         'current-hours current-hours'
-        'last-hours last-hours';
-      gap: 2rem;
+        'past-hours past-hours';
       height: 100%;
     }
 
@@ -67,7 +66,7 @@
     }
 
     .card__past-hours {
-      grid-area: last-hours;
+      grid-area: past-hours;
       justify-self: flex-end;
       font-size: 1.5rem;
       font-weight: $fw-regular;
