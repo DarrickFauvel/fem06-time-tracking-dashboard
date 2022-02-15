@@ -9,6 +9,10 @@
   background-position: top -1.1rem right 1.7rem;
   cursor: pointer;
 
+  @media (min-width: $breakpoint-xlg) {
+    padding-top: 4.5rem;
+  }
+
   &:hover .card__content {
     background-color: $clr-body-hover;
   }
